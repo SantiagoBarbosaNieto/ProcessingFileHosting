@@ -9,6 +9,13 @@ window.onload = function() {
       console.error("Processing.js failed to load");
       return;
     }
+    // Set canvas pixel dimensions to match CSS size
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
     var processingInstance = new Processing(canvas, sketchProc);
     console.log("Processing.js sketch initialized");
   } catch (e) {
