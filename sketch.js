@@ -1,13 +1,16 @@
 function sketchProc(processing) {
-  let x = 200;
+  let x = 200; // Initial x position
   processing.setup = function() {
-    processing.size(400, 400);
+    // Use canvas dimensions (set by iFrame size)
+    processing.size(processing.width, processing.height);
     processing.background(255);
   };
   processing.draw = function() {
     processing.background(255); // Clear canvas
     processing.fill(getRandomColor(processing));
-    processing.ellipse(x, 200, 50, 50);
-    x = (x + 1) % 400; // Move circle right, wrap around
+    // Scale ellipse size relative to canvas width
+    let ellipseSize = processing.width * 0.125; // 12.5% of canvas width
+    processing.ellipse(x, processing.height / 2, ellipseSize, ellipseSize);
+    x = (x + 1) % processing.width; // Move circle, wrap around
   };
 }
