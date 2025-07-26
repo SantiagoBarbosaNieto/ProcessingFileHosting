@@ -3,7 +3,7 @@ function sketchProc(processing) {
   processing.setup = function() {
     // Use canvas dimensions (set by iFrame size)
     processing.size(processing.width, processing.height);
-    processing.background(255);
+    processing.background(100);
   };
   processing.draw = function() {
     processing.background(255); // Clear canvas
