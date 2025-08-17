@@ -8,7 +8,7 @@ function sketchProc(processing) {
   processing.draw = function() {
     processing.background(255);
     processing.fill(getRandomColor(processing));
-    let ellipseSize = processing.width * 0.125; // 12.5% of canvas width
+    let ellipseSize = processing.width * 0.325; // 12.5% of canvas width
     processing.ellipse(x, processing.height / 2, ellipseSize, ellipseSize);
     x = (x + 1) % processing.width;
   };
