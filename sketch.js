@@ -2,7 +2,7 @@ function sketchProc(processing) {
   let x = 200;
   processing.setup = function() {
     // Set canvas size to match actual pixel dimensions
-    processing.size(processing.width, processing.height);
+    processing.size(1000, 3000);
     processing.background(255);
   };
   processing.draw = function() {
