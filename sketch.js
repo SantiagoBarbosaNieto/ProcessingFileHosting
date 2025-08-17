@@ -12,8 +12,4 @@ function sketchProc(processing) {
     processing.ellipse(x, processing.height / 2, ellipseSize, ellipseSize);
     x = (x + 1) % processing.width;
   };
-  // Handle window resize
-  processing.windowResized = function() {
-    processing.size(processing.width, processing.height);
-  };
 }
